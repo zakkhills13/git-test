@@ -1,19 +1,36 @@
-html {
+/*general styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+/* styles for homepage */
+body.home {
     background-image: url(./assets/cloud.img);
-    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100%;
+    height: 100vh;
+}
+/* styles for education page */
+body.education-page {
+    background-color: lightgrey;
 }
 .list1 {
-    margin: 1%;
+    margin: 10%;
     padding-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+    align-items: center;
+    min-width: 800px;
+    border: none;
     
 }
 .list1 a {
     color: black;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     
     
 }
@@ -28,15 +45,490 @@ html {
 h2 {
     margin-bottom: 5%;
     font-size: 2rem;
-    
-    
 }
-h1 {
-    color: white;
-    margin-left: 20%;
-}
+    
 .header {
-    padding: 5px;
+    padding: 3px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 10vh;  
+    margin-top: 5%;  
     background-image: url(./assets/cloud.img);
+
+}
+.glossary {
+    text-align: center;
+    text-decoration:underline;
+    color:navy;
+}
+  /*start of styling for education page*/  
+
+.education-page {
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+}
+.edu-header {
+        display: block;
+        background: linear-gradient(to right, #ede1e4, #ed815d);
+        text-align: center;
+        text-transform:uppercase;
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        }
+        
+ .bba-1 {
+    margin: 30px;
+    display:block;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    padding: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+     width:fit-content;
+    opacity: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s;
+     }
+.bba-1:hover {
+    transform: scale(1.05);
+}
+ .bba-2 {
+    margin: 30px;
+    padding: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    display: block;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    width:fit-content;
+    opacity: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s;
+ }
+ .bba-2:hover {
+    transform: scale(1.05);
+ }
+ 
+ .fsc {
+    margin: 30px;
+    padding: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    display: block;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+    width: fit-content;
+    opacity: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s;
+ }
+ .fsc:hover {
+    transform: scale(1.05);
+ }
+ 
+.matric {
+    display: block;
+    margin: 30px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f); 
+    width: fit-content;
+    opacity: 90%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 15px; 
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.matric:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.matric h2, .matric h4, .matric h5, .matric p, .fsc h2, .fsc h4, .fsc h5, .fsc p, .bba-1 h2, .bba-1 h4, .bba-1 h5,
+.bba-1 p, .bba-2 h2, .bba-2 h4, .bba-2 h5, .bba-2 p
+ {
+    margin: 5px 0;
+    color: #111010; /* Text color */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.matric h2, .fsc h2, .bba-1 h2, .bba-2 h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4a90e2; /* Different color for the main heading */
+}
+
+.matric h4, .fsc h4, .bba-1 h4, .bba-2 h4 {
+    font-size: 1.2em;
+    color: #e94e77; /* Different color for the subheading */
+}
+
+.matric h5, .fsc h5, .bba-1 h5, .bba-2 h5{
+    font-size: 1em;
+    color: #ed815d; /* Different color for the secondary subheading */
+}
+
+.matric p, .fsc p, .bba-1 p, .bba-2 p {
+    font-size: 0.9em;
+    color: #555; /* Standard color for paragraphs */
+}
+
+
+ .education-page .back-button {
     display: inline-block;
+    background: linear-gradient(to top, #555, #4a90e2);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 40px;
+    transition: transform 0.3s;
+ }
+ .education-page .back-button a {
+    color: black;
+     }
+.education-page .back-button:hover{
+    transform: scale(1.05);
+}
+.edu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+.edu-container .bba-1,
+.edu-container .bba-2,
+.edu-container .fsc,
+.edu-container .matric {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 70%;
+  /*end of styling for education page..........................*/  
+}
+/* start styling of Professional Summary Page */
+ .professional-summary {
+    background: linear-gradient(135deg, #8492a6, #e3ebf6);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+ }
+.ps-header {
+    display: block;
+    text-align: center;
+    font-weight: 10px;
+    font-family: sans-serif;
+    background: linear-gradient(to left, #35386e, #35386e);
+    opacity: 90;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #e3ebf6;
+    }
+.ps-container {
+    display: block;
+    padding: 5px;
+    margin: 50px;
+    margin-left: 100px;
+    width: fit-content;
+    text-align:left;
+    background-color: #8492a6;
+    border-radius: 15px;
+    opacity: 90%;
+}
+.l1, .l2, .l3, .l4{
+            display: list-item;
+            font-size: 20px;
+            margin: 15px;
+                 
+}    
+.ps-intro {
+    margin-left: 30px;
+    width: fit-content;
+    font-size: 30px;
+    text-decoration: underline;
+    display:block;
+    background-color: #00000014;
+    padding: 20px;
+    }
+.ps-footer {
+    margin-left: 30px;
+    width: fit-content;
+    font-size: 30px;
+    text-decoration: underline;
+    display:block;
+    background-color: #00000014;
+    padding: 10px;
+}
+
+.psback-button a {
+    display: inline-flex;
+    color: black;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #8492a6
+}
+/*** end of professional summary styling */
+
+/* start of styling of achievements page */
+.achievements {
+    background: linear-gradient(to bottom, #394b39, black);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;   
+}
+.ach-h1 {
+    font-family: "Jacquard 24 Charted", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  }
+.div-ach {
+    display: block;
+    margin: 50px;
+    padding: 50px;
+}
+.ach-list {
+    display: block;
+    margin-left: 500px;
+    padding: 50px;
+   
+}
+.ach-l1 {
+        padding: 20px;
+    margin: 10px;
+    margin-right: 450px;
+    color: white;
+    background: linear-gradient(to top, #0e120e, #475e47);
+    border-radius: 15px;
+
+}
+.ach-l2 {
+    padding: 20px;
+    margin: 10px;
+    margin-right: 450px;
+    color: white;
+    background: linear-gradient(to top, #0e120e, #475e47);
+    border-radius: 15px;
+    
+}
+.ach-back-button {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 15px;
+    background-color: #475e47;
+    border-radius: 15px;
+    
+}
+.ach-back-button a{
+    color: white;
+}
+/* end of styling for achievements page */
+#skills {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #051c1b, #00073c );
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+.skills-container h1 {
+    font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.skills-container {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(241, 232, 232, 0.2);
+    max-width: 800px;
+}
+#text-color {
+        color: rgb(147, 179, 147);
+        font-size: 2em;
+        margin-bottom: 20px;
+           
+}
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style-type:none;
+    padding: 0;
+
+}
+.skills-list div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #214238;
+    background: linear-gradient(to bottom right, #34495e, #2ecc71);
+    color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+    transition: transform .03s background 0.3s, box-shadow0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+.skills-list div:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to bottom right, #2ecc71, #34495e);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+}
+.skillsback-button {
+    display: inline-flex;
+    font-size: 1em;
+     border-radius: 20px;
+    border: 3px solid 214238;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #34495e, #2ecc71);
+}
+.skillsback-button a {
+    color: white;
+}
+
+/* styling for Goals page ***********/
+
+
+/* styling for experience page */
+.experience-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1.exp-header {
+    font-size: 2.5em;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+p.exp-1, p.exp-2, p.exp-3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+p.exp-1-1, p.exp-2-2, p.exp-3-3 {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.experience-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.experience-item ul li {
+    margin-bottom: 10px;
+}
+
+h3.back-button {
+    margin-top: 30px;
+}
+
+h3.back-button a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h3.back-button a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Specific styles for different experience sections */
+.exp1-details, .exp2-details, .exp3-details {
+    margin-bottom: 30px;
+}
+
+.exp1-details ul, .exp2-details ul, .exp3-details ul {
+    margin-top: 10px;
+}
+
+.bsm-list {
+    font-weight: bold;
+}
+
+/*styling for goals page*/
+.goals-page {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    width: fit-content;
+    background: linear-gradient(to right, #5b3683, #0a0a0c);
+    }
+    .goals-page h1 {
+        text-align: center;
+        color: rgb(20, 20, 19);
+        display: block;
+        background:linear-gradient(#d4ddd9 50%, #658673 50%);
+        box-shadow: 0 8px 8px purple;
+
+    }
+.goals-page body {
+    margin-top: 15%;
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+}
+.goals-box {
+    border: 10px solid;
+    border-radius: 15px;
+    border-color: #00000014;
+    padding: 20px;
+    display: flex;
+    background-color: rgb(180, 181, 197);
+    box-shadow: 0 10px 10px ;
+
+    
 }
