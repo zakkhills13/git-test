@@ -200,7 +200,7 @@ h2 {
 .matric h2, .matric h4, .matric h5, .matric p, .fsc h2, .fsc h4, .fsc h5, .fsc p, .bba-1 h2, .bba-1 h4, .bba-1 h5,
 .bba-1 p, .bba-2 h2, .bba-2 h4, .bba-2 h5, .bba-2 p
  {
-    margin: 5px 0;
+    margin: 0px 0;
     color: #111010; /* Text color */
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -219,6 +219,7 @@ h2 {
 
 .matric h5, .fsc h5, .bba-1 h5, .bba-2 h5{
     font-size: 1em;
+    margin: 2px;
     color: #ed815d; /* Different color for the secondary subheading */
 }
 
@@ -333,71 +334,95 @@ h2 {
 
 /* start of styling of achievements page */
 .achievements {
-    background: linear-gradient(to bottom, #394b39, black);
+    background: linear-gradient(to bottom, #2f3e2f, rgb(10, 10, 10));
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0;
-    padding: 0;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    color: #fff;
-    text-align: center;   
-}
-.ach-h1 {
-    font-family: "Jacquard 24 Charted", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 2.5em;
-  text-align: center;
-  width: 100%;
-  border: none;
-  margin: auto;
-}
-.div-ach{
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    padding: 0px;
-}
-
-.ach-list {
-    display: block;
-    margin-left: 500px;
-    padding: 50px;
-   
-}
-.ach-l1 {
-        padding: 20px;
-    margin: 10px;
-    margin-right: 450px;
-    color: white;
-    background: linear-gradient(to top, #0e120e, #475e47);
-    border-radius: 15px;
-
-}
-.ach-l2 {
     padding: 20px;
-    margin: 10px;
-    margin-right: 450px;
-    color: white;
-    background: linear-gradient(to top, #0e120e, #475e47);
+  }
+  
+  .ach-content { /* New parent class */
+    display: flex;
+    flex-wrap: wrap; /* Allows achievements to wrap in a single line */
+    margin: auto;
+    width: 100%;
+  }
+  
+  .ach-h1 {
+    font-family: "Jacquard 24 Charted", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    text-align: center;
+    color: inherit; /* Inherit from .achievements */
+    word-wrap: break-word;
+  }
+  
+  .ach-list-item { /* Achievement item styles */
+    display: inline-block; /* Changed to inline-block for individual styling */
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 5px; /* Adjust margin as needed */
+    background-color: green;
     border-radius: 15px;
-    
-}
-.ach-back-button {
+    color: white;
+    box-shadow: 0px 4px 8px;
+
+  }
+  .ach-list {
+    display: inline-flex;
+    flex-direction: column; /* Or row, depending on your layout */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .ach-l1 {
+    display: inline-flex;
+    background: linear-gradient(to right, rgb(89, 112, 89), black);
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .ach-l2 {
+    display: inline-flex;
+    background: linear-gradient(to right, rgb(89, 112, 89), black);
+    color: white;    padding: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .ach-back-button {
     display: inline-block;
-    margin-left: 30px;
+    margin: 15px;
     padding: 15px;
     background-color: #475e47;
     border-radius: 15px;
-    
-}
-.ach-back-button a{
+  }
+  
+  .ach-back-button a {
     color: white;
-}
+  }
+  
+  @media (max-width: 768px) {
+    .ach-content {
+      flex-direction: column; /* Achievements stack vertically on smaller screens */
+    }
+    .ach-list-item {
+      margin-right: 0;
+    }
+  }
+    
 /* end of styling for achievements page */
 #skills {
     font-family: 'Arial', sans-serif;
@@ -432,14 +457,20 @@ h2 {
 }
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Default for larger screens */
     gap: 20px;
-    list-style-type:none;
+    list-style-type: none;
     padding: 0;
-
-}
+  }
+  
+  @media (max-width: 768px) {  /* For smaller screens (adjust breakpoint as needed) */
+    .skills-list {
+      grid-template-columns: repeat(1, 1fr); /* Change to desired number of columns */
+    }
+  }
 .skills-list div {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border: 3px solid #214238;
